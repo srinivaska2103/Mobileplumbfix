@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="main-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%237C3AED' d='M224 96l16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0c-17.7 0-32 14.3-32 32s14.3 32 32 32zM128 160c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160c0 17.7 14.3 32 32 32l32 0 0 48c0 17.7 14.3 32 32 32s32-14.3 32-32l0-48 112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-128zm352 32l-128 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0c17.7 0 32-14.3 32-32s-14.3-32-32-32z'/></svg>">
+    <title>PlumbFix 24/7 | Emergency Plumbing Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6b21a8', // Purple 800
+                        secondary: '#9333ea', // Purple 600
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for better UI */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #6b21a8; border-radius: 10px; }
+        .dark ::-webkit-scrollbar-track { background: #1f2937; }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html">
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="p-2 bg-primary rounded-lg text-white">
+                        <i class="fas fa-faucet-drip text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-primary dark:text-purple-400">PlumbFix</span>
+                </div>
+                </a>
+                
+
+               <div id="nav-menu" class="hidden lg:flex space-x-8 items-center font-medium">
+    <a href="index.html" class="nav-link hover:text-primary transition">Home</a>
+    <a href="home2.html" class="nav-link hover:text-primary transition">Home2</a>
+    <a href="about.html" class="nav-link hover:text-primary transition">About</a>
+    <a href="service.html" class="nav-link hover:text-primary transition">Service</a>
+    <a href="contact.html" class="nav-link hover:text-primary transition">Contact</a>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Get the current page filename (e.g., "about.html")
+    const currentPath = window.location.pathname.split("/").pop();
+
+    // Select all nav links
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute("href");
+
+        // Check if current path matches link href
+        // Also handles the case for the home page (index.html or empty path)
+        if (currentPath === linkPath || (currentPath === "" && linkPath === "index.html")) {
+            
+            // Active Styles: Purple text + a small bottom border/underline
+            link.classList.add("text-primary", "dark:text-purple-400", "border-b-2", "border-primary");
+            link.classList.remove("hover:text-primary"); // Remove hover effect once active
+        }
+    });
+});
+</script>
+
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <i id="theme-icon" class="fas fa-moon"></i>
+                    </button>
+                    <button onclick="toggleDirection()" class="text-xs font-bold border border-primary px-2 py-1 rounded">
+                        <span id="dir-text">LTR</span>
+                    </button>
+                    <div class="hidden lg:flex items-center space-x-4">
+    
+    <a href="login.html" class="px-6 py-2 border-2 border-primary text-primary dark:text-purple-400 font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300">
+        Login
+    </a>
+
+    <div class="relative group">
+        <button class="bg-primary text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-purple-700 transition shadow-lg shadow-purple-200 dark:shadow-none">
+            <i class="fas fa-user-circle text-lg"></i>
+            <span>My Account</span>
+            <i class="fas fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
+        </button>
+        
+        <div class="absolute right-0 mt-3 w-56 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50">
+          
+            <div class="p-2">
+                <a href="user.html" class="flex items-center gap-3 px-4 py-3 text-sm hover:bg-purple-50 dark:hover:bg-gray-700 rounded-lg transition">
+                    <i class="fas fa-th-large text-primary"></i> Dashboard
+                </a>
+                
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+                </div>
+
+                <div class="lg:hidden flex items-center gap-4">
+                    <button onclick="toggleTheme()" class="p-2"><i id="theme-icon-mob" class="fas fa-moon"></i></button>
+                    <button onclick="toggleMenu()" class="text-primary text-2xl">
+                        <i id="menu-btn" class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800 px-4 pt-2 pb-6 space-y-2 shadow-xl">
+    <a href="index.html" class="nav-link block py-3 border-b dark:border-gray-800">Home</a>
+    <a href="home2.html" class="nav-link block py-3 border-b dark:border-gray-800">Home2</a>
+    <a href="about.html" class="nav-link block py-3 border-b dark:border-gray-800">About</a>
+    <a href="service.html" class="nav-link block py-3 border-b dark:border-gray-800">Service</a>
+    <a href="contact.html" class="nav-link block py-3 border-b dark:border-gray-800">Contact</a>
+
+    <div class="border-b dark:border-gray-800">
+        <button onclick="toggleMobileDashboard()" class="w-full flex justify-between items-center py-3 text-left font-medium text-primary dark:text-purple-400">
+            <span><i class="fas fa-user-circle mr-2"></i>User Dashboard</span>
+            <i id="dash-chevron" class="fas fa-chevron-down text-xs transition-transform"></i>
+        </button>
+        <div id="mobile-dash-content" class="hidden bg-gray-50 dark:bg-gray-800/50 rounded-lg mb-2">
+            <a href="user.html" class="block px-4 py-3 text-sm"><i class="fas fa-th-large mr-2"></i> Dashboard</a>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-3 pt-4">
+        <button onclick="toggleDirection()" class="w-full border border-primary py-3 rounded-lg font-bold text-primary dark:text-purple-400">
+            <i class="fas fa-arrows-left-right mr-2"></i> Switch Direction (LTR/RTL)
+        </button>
+        <button class="w-full bg-primary text-white py-3 rounded-lg font-bold">
+            Login
+        </button>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // 1. Handle Automatic Active State
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute("href");
+        
+        if (currentPath === linkPath) {
+            // Apply active styles
+            link.classList.add("text-primary", "dark:text-purple-400", "font-bold");
+            
+            // For desktop specifically, add the underline
+            if (window.innerWidth >= 1024) {
+                link.classList.add("border-b-2", "border-primary");
+            } else {
+                // For mobile, maybe add a small indicator icon or background
+                link.classList.add("bg-purple-50", "dark:bg-purple-900/10", "px-2");
+            }
+        }
+    });
+});
+
+// 2. Mobile Dashboard Toggle Function
+function toggleMobileDashboard() {
+    const content = document.getElementById('mobile-dash-content');
+    const chevron = document.getElementById('dash-chevron');
+    
+    content.classList.toggle('hidden');
+    chevron.classList.toggle('rotate-180');
+}
+    </script>
+    </nav>
+
+<div class="transition-colors duration-300 bg-white dark:bg-gray-950">
+    
+    <section class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&q=80&w=2000" 
+             class="absolute inset-0 w-full h-full object-cover" alt="Plumbing Background">
+        <div class="absolute inset-0 bg-primary/60 dark:bg-gray-900/80 backdrop-blur-[2px]"></div>
+        
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl md:text-7xl font-black text-white leading-tight mb-4">Get In <span class="text-purple-200">Touch</span></h1>
+            <p class="text-purple-100 text-lg md:text-xl max-w-xl mx-auto font-medium opacity-90">
+                Emergency or inquiry? Our team is on standby 24/7.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-24 relative -mt-20 z-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-[2.5rem] shadow-2xl border border-purple-50 dark:border-gray-800 space-y-8 h-full">
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white">Quick Connect</h3>
+                        
+                        <div class="space-y-6">
+                            <a href="tel:+123456789" class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/40 rounded-2xl flex items-center justify-center text-primary dark:text-purple-300 group-hover:bg-primary group-hover:text-white transition-all">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">24/7 Support</p>
+                                    <p class="font-bold dark:text-white">(555) 012-3456</p>
+                                </div>
+                            </a>
+
+                            <div class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center text-green-600">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Email Us</p>
+                                    <p class="font-bold dark:text-white">help@plumbfix.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Headquarters</p>
+                                    <p class="font-bold dark:text-white">123 Tech Avenue, NY</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t dark:border-gray-800 flex justify-center lg:justify-start gap-4">
+                            <a href="#" class="w-10 h-10 rounded-xl bg-gray-50 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-xl bg-gray-50 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-xl bg-gray-50 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="bg-white dark:bg-gray-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-purple-50 dark:border-gray-800">
+                        <form id="contactForm" class="grid md:grid-cols-2 gap-6" onsubmit="return false;">
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Your Name</label>
+                                <input type="text" placeholder="John Doe" 
+                                    class="w-full px-6 py-4 rounded-2xl bg-gray-50 dark:bg-gray-950 border-2 border-transparent focus:border-primary outline-none transition-all font-bold dark:text-white placeholder:text-gray-300">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Email Address</label>
+                                <input type="email" placeholder="john@example.com" 
+                                    class="w-full px-6 py-4 rounded-2xl bg-gray-50 dark:bg-gray-950 border-2 border-transparent focus:border-primary outline-none transition-all font-bold dark:text-white placeholder:text-gray-300">
+                            </div>
+                            <div class="md:col-span-2 space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Service Needed</label>
+                                <div class="relative">
+                                    <select class="w-full px-6 py-4 rounded-2xl bg-gray-50 dark:bg-gray-950 border-2 border-transparent focus:border-primary outline-none transition-all font-bold dark:text-white appearance-none cursor-pointer">
+                                        <option>Emergency Plumbing</option>
+                                        <option>Drain Cleaning</option>
+                                        <option>Water Heater Quote</option>
+                                        <option>General Maintenance</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Your Message</label>
+                                <textarea rows="4" placeholder="Briefly describe your issue..." 
+                                    class="w-full px-6 py-4 rounded-2xl bg-gray-50 dark:bg-gray-950 border-2 border-transparent focus:border-primary outline-none transition-all font-bold dark:text-white resize-none placeholder:text-gray-300"></textarea>
+                            </div>
+                            <div class="md:col-span-2">
+                                <button type="button" class="w-full bg-primary hover:bg-secondary text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-purple-200 dark:shadow-none transition-all hover:scale-[1.01] active:scale-95 uppercase tracking-widest">
+                                    Send Message <i class="fas fa-paper-plane ml-2 text-sm"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white dark:border-gray-900 h-[400px] md:h-[500px] relative group">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.11976373946229!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1675876543210!5m2!1sen!2sus" 
+                    class="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-[2000ms]" 
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+                <div class="absolute top-6 left-6 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-purple-100 dark:border-gray-800 transform transition-transform group-hover:scale-105">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <span class="text-[10px] md:text-xs font-black dark:text-white uppercase tracking-widest">Technicians Active Nearby</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+  <footer class="bg-gray-50 dark:bg-gray-950 pt-16 pb-8 border-t dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="space-y-6">
+                <a href="index.html">
+                    <div class="flex items-center gap-2">
+                    <div class="p-2 bg-primary rounded-lg text-white">
+                        <i class="fas fa-faucet-drip text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-primary">PlumbFix</span>
+                </div>
+                </a>
+                
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Premium 24/7 plumbing and home maintenance services. We pride ourselves on fast response times and quality craftsmanship.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b-2 border-primary w-fit">Quick Links</h4>
+                <ul class="space-y-4 text-gray-600 dark:text-gray-400 font-medium">
+                    <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-primary transition">About Us</a></li>
+                    <li><a href="service.html" class="hover:text-primary transition">Our Services</a></li>
+                    <li><a href="gallery.html" class="hover:text-primary transition">Project Gallery</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b-2 border-primary w-fit">Support</h4>
+                <ul class="space-y-4 text-gray-600 dark:text-gray-400 font-medium">
+                    <li><a href="booknow.html" class="hover:text-primary transition">Book Now</a></li>
+                    <li><a href="404.html" class="hover:text-primary transition">Error 404</a></li>
+                    <li><a href="comingsoon.html" class="hover:text-primary transition">Coming Soon</a></li>
+                    <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b-2 border-primary w-fit">Newsletter</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 font-medium">Get tips on maintaining your home plumbing.</p>
+                <div class="relative">
+                    <input type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border dark:bg-gray-800 dark:border-gray-700 focus:ring-2 focus:ring-primary outline-none">
+                    <button class="absolute right-2 top-2 bg-primary text-white p-2 rounded-md hover:bg-secondary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 pt-8 border-t dark:border-gray-800 text-center text-sm text-gray-500">
+            <p>&copy; 2026 PlumbFix Home Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Dark/Light Mode Logic ---
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateThemeIcons('light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateThemeIcons('dark');
+            }
+        }
+
+        function updateThemeIcons(mode) {
+            const icons = [document.getElementById('theme-icon'), document.getElementById('theme-icon-mob')];
+            icons.forEach(icon => {
+                icon.className = mode === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            });
+        }
+
+        // --- LTR/RTL Logic ---
+        function toggleDirection() {
+            const html = document.getElementById('main-html');
+            const dirText = document.getElementById('dir-text');
+            if (html.dir === 'ltr') {
+                html.dir = 'rtl';
+                dirText.innerText = 'RTL';
+                localStorage.setItem('dir', 'rtl');
+            } else {
+                html.dir = 'ltr';
+                dirText.innerText = 'LTR';
+                localStorage.setItem('dir', 'ltr');
+            }
+        }
+
+        // --- Mobile Menu Toggle ---
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('menu-btn');
+            menu.classList.toggle('hidden');
+            btn.classList.toggle('fa-bars');
+            btn.classList.toggle('fa-times');
+        }
+
+        // --- Initialize from Local Storage ---
+        window.onload = () => {
+            // Theme
+            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                updateThemeIcons('dark');
+            }
+            // Direction
+            if (localStorage.getItem('dir') === 'rtl') {
+                document.getElementById('main-html').dir = 'rtl';
+                document.getElementById('dir-text').innerText = 'RTL';
+            }
+        }
+    </script>
+</body>
+</html>

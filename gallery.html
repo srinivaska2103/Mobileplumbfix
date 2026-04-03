@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="main-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%237C3AED' d='M224 96l16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0c-17.7 0-32 14.3-32 32s14.3 32 32 32zM128 160c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160c0 17.7 14.3 32 32 32l32 0 0 48c0 17.7 14.3 32 32 32s32-14.3 32-32l0-48 112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-128zm352 32l-128 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0c17.7 0 32-14.3 32-32s-14.3-32-32-32z'/></svg>">
+    <title>PlumbFix 24/7 | Emergency Plumbing Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6b21a8', // Purple 800
+                        secondary: '#9333ea', // Purple 600
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for better UI */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #6b21a8; border-radius: 10px; }
+        .dark ::-webkit-scrollbar-track { background: #1f2937; }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html">
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="p-2 bg-primary rounded-lg text-white">
+                        <i class="fas fa-faucet-drip text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-primary dark:text-purple-400">PlumbFix</span>
+                </div>
+                </a>
+                
+
+               <div id="nav-menu" class="hidden lg:flex space-x-8 items-center font-medium">
+    <a href="index.html" class="nav-link hover:text-primary transition">Home</a>
+    <a href="home2.html" class="nav-link hover:text-primary transition">Home2</a>
+    <a href="about.html" class="nav-link hover:text-primary transition">About</a>
+    <a href="service.html" class="nav-link hover:text-primary transition">Service</a>
+    <a href="contact.html" class="nav-link hover:text-primary transition">Contact</a>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Get the current page filename (e.g., "about.html")
+    const currentPath = window.location.pathname.split("/").pop();
+
+    // Select all nav links
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute("href");
+
+        // Check if current path matches link href
+        // Also handles the case for the home page (index.html or empty path)
+        if (currentPath === linkPath || (currentPath === "" && linkPath === "index.html")) {
+            
+            // Active Styles: Purple text + a small bottom border/underline
+            link.classList.add("text-primary", "dark:text-purple-400", "border-b-2", "border-primary");
+            link.classList.remove("hover:text-primary"); // Remove hover effect once active
+        }
+    });
+});
+</script>
+
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <i id="theme-icon" class="fas fa-moon"></i>
+                    </button>
+                    <button onclick="toggleDirection()" class="text-xs font-bold border border-primary px-2 py-1 rounded">
+                        <span id="dir-text">LTR</span>
+                    </button>
+                    <div class="hidden lg:flex items-center space-x-4">
+    
+    <a href="login.html" class="px-6 py-2 border-2 border-primary text-primary dark:text-purple-400 font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300">
+        Login
+    </a>
+
+    <div class="relative group">
+        <button class="bg-primary text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-purple-700 transition shadow-lg shadow-purple-200 dark:shadow-none">
+            <i class="fas fa-user-circle text-lg"></i>
+            <span>My Account</span>
+            <i class="fas fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
+        </button>
+        
+        <div class="absolute right-0 mt-3 w-56 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50">
+          
+            <div class="p-2">
+                <a href="user.html" class="flex items-center gap-3 px-4 py-3 text-sm hover:bg-purple-50 dark:hover:bg-gray-700 rounded-lg transition">
+                    <i class="fas fa-th-large text-primary"></i> Dashboard
+                </a>
+                
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+                </div>
+
+                <div class="lg:hidden flex items-center gap-4">
+                    <button onclick="toggleTheme()" class="p-2"><i id="theme-icon-mob" class="fas fa-moon"></i></button>
+                    <button onclick="toggleMenu()" class="text-primary text-2xl">
+                        <i id="menu-btn" class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800 px-4 pt-2 pb-6 space-y-2 shadow-xl">
+    <a href="index.html" class="nav-link block py-3 border-b dark:border-gray-800">Home</a>
+    <a href="home2.html" class="nav-link block py-3 border-b dark:border-gray-800">Home2</a>
+    <a href="about.html" class="nav-link block py-3 border-b dark:border-gray-800">About</a>
+    <a href="service.html" class="nav-link block py-3 border-b dark:border-gray-800">Service</a>
+    <a href="contact.html" class="nav-link block py-3 border-b dark:border-gray-800">Contact</a>
+
+    <div class="border-b dark:border-gray-800">
+        <button onclick="toggleMobileDashboard()" class="w-full flex justify-between items-center py-3 text-left font-medium text-primary dark:text-purple-400">
+            <span><i class="fas fa-user-circle mr-2"></i>User Dashboard</span>
+            <i id="dash-chevron" class="fas fa-chevron-down text-xs transition-transform"></i>
+        </button>
+        <div id="mobile-dash-content" class="hidden bg-gray-50 dark:bg-gray-800/50 rounded-lg mb-2">
+            <a href="user.html" class="block px-4 py-3 text-sm"><i class="fas fa-th-large mr-2"></i> Dashboard</a>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-3 pt-4">
+        <button onclick="toggleDirection()" class="w-full border border-primary py-3 rounded-lg font-bold text-primary dark:text-purple-400">
+            <i class="fas fa-arrows-left-right mr-2"></i> Switch Direction (LTR/RTL)
+        </button>
+        <button class="w-full bg-primary text-white py-3 rounded-lg font-bold">
+            Login
+        </button>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // 1. Handle Automatic Active State
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute("href");
+        
+        if (currentPath === linkPath) {
+            // Apply active styles
+            link.classList.add("text-primary", "dark:text-purple-400", "font-bold");
+            
+            // For desktop specifically, add the underline
+            if (window.innerWidth >= 1024) {
+                link.classList.add("border-b-2", "border-primary");
+            } else {
+                // For mobile, maybe add a small indicator icon or background
+                link.classList.add("bg-purple-50", "dark:bg-purple-900/10", "px-2");
+            }
+        }
+    });
+});
+
+// 2. Mobile Dashboard Toggle Function
+function toggleMobileDashboard() {
+    const content = document.getElementById('mobile-dash-content');
+    const chevron = document.getElementById('dash-chevron');
+    
+    content.classList.toggle('hidden');
+    chevron.classList.toggle('rotate-180');
+}
+    </script>
+    </nav>
+    <section class="relative min-h-[85vh] flex items-center pt-24 pb-16 bg-[#F5F3FF] dark:bg-gray-950 overflow-hidden transition-colors duration-300">
+    
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-0 left-0 w-1/3 h-full bg-white/50 dark:bg-gray-900/50 -skew-x-12 transform origin-bottom hidden lg:block"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
+            
+            <div class="space-y-8 text-center lg:text-left animate-fadeIn">
+                <div class="inline-flex items-center gap-2 bg-white dark:bg-gray-900 px-4 py-2 rounded-full shadow-sm border border-purple-100 dark:border-gray-800">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span class="text-xs font-black text-gray-600 dark:text-gray-400 uppercase tracking-widest">Real Results, Real Homes</span>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white leading-[1.1] tracking-tight">
+                    Our Work <br class="hidden md:block"> 
+                    <span class="text-primary italic">Speaks</span> for Itself
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Real results from real customers. Witness our Before & After transformations that restore comfort and value to your home.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                    <button onclick="showTab('booking')" class="group w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-2xl font-black text-sm shadow-2xl shadow-primary/30 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 tracking-widest">
+                        START NOW<i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                    </button>
+                    
+                </div>
+            </div>
+
+            <div class="relative hidden lg:block animate-fadeIn" style="animation-delay: 0.2s">
+                <div class="relative w-full h-[550px] aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-gray-900 group" id="before-after-slider">
+                    
+                    <img src="assets/gimg1" 
+                         class="absolute inset-0 w-full h-full object-cover" alt="After Transformation">
+                    
+                    <div class="absolute inset-0 w-full h-full overflow-hidden" id="before-image-wrapper" style="width: 50%;">
+                        <img src="assets/gimg2" 
+                             class="absolute inset-0 w-full h-full object-cover grayscale" alt="Before Transformation" style="width: 800px; max-w-none;">
+                    </div>
+
+                    <div class="absolute inset-y-0 left-1/2 w-1 bg-white cursor-col-resize group-hover:w-1.5 transition-all" id="slider-handle" style="left: 50%;">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl border-4 border-white group-hover:scale-110 transition-transform">
+                            <i class="fas fa-arrows-alt-h"></i>
+                        </div>
+                    </div>
+
+                    <span class="absolute top-6 left-6 bg-slate-900/70 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest backdrop-blur-sm z-20">Before</span>
+                    <span class="absolute top-6 right-6 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg z-20">After</span>
+                </div>
+            </div>
+
+            <div class="lg:hidden mt-12 animate-fadeIn" style="animation-delay: 0.2s">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="relative rounded-3xl overflow-hidden border-4 border-white dark:border-gray-900 shadow-xl">
+                        <img src="assets/gimg2" class="w-full aspect-[4/5] object-cover grayscale" alt="Before">
+                        <span class="absolute top-3 left-3 bg-slate-900/70 text-white text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-widest">Before</span>
+                    </div>
+                    <div class="relative rounded-3xl overflow-hidden border-4 border-white dark:border-gray-900 shadow-xl">
+                        <img src="assets/gimg1" class="w-full aspect-[4/5] object-cover" alt="After">
+                        <span class="absolute top-3 right-3 bg-primary text-white text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-widest">After</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <section class="py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12 space-y-4">
+            <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.2em] uppercase text-[10px]">Portfolio</h2>
+            <p class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white">Our Recent <span class="text-primary">Masterpieces</span></p>
+        </div>
+
+        <div class="flex overflow-x-auto pb-4 mb-12 scrollbar-hide lg:justify-center no-scrollbar">
+            <div class="flex items-center gap-3 px-2">
+                <button onclick="filterGallery('all')" class="filter-btn active-filter px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest whitespace-nowrap transition-all border-2 border-transparent" data-category="all">All Work</button>
+                <button onclick="filterGallery('leak')" class="filter-btn bg-gray-50 dark:bg-gray-900 text-gray-500 dark:text-gray-400 px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest whitespace-nowrap transition-all border-2 border-transparent hover:border-primary/30" data-category="leak">Leak Repairs</button>
+                <button onclick="filterGallery('bath')" class="filter-btn bg-gray-50 dark:bg-gray-900 text-gray-500 dark:text-gray-400 px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest whitespace-nowrap transition-all border-2 border-transparent hover:border-primary/30" data-category="bath">Bathroom</button>
+                <button onclick="filterGallery('pipe')" class="filter-btn bg-gray-50 dark:bg-gray-900 text-gray-500 dark:text-gray-400 px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest whitespace-nowrap transition-all border-2 border-transparent hover:border-primary/30" data-category="pipe">Pipe Install</button>
+                <button onclick="filterGallery('heater')" class="filter-btn bg-gray-50 dark:bg-gray-900 text-gray-500 dark:text-gray-400 px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest whitespace-nowrap transition-all border-2 border-transparent hover:border-primary/30" data-category="heater">Water Heater</button>
+                <button onclick="filterGallery('drain')" class="filter-btn bg-gray-50 dark:bg-gray-900 text-gray-500 dark:text-gray-400 px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest whitespace-nowrap transition-all border-2 border-transparent hover:border-primary/30" data-category="drain">Drain Cleaning</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="gallery-grid">
+            
+            <div class="gallery-item leak group relative rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-[4/5] shadow-lg transition-all duration-500">
+                <img src="assets/Leak Detection1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Leak Repair">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-8 left-8 right-8 translate-y-6 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 space-y-1">
+                    <p class="text-[10px] font-black text-primary uppercase tracking-widest">Emergency</p>
+                    <h4 class="text-2xl font-black text-white">Leak Detection</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item bath group relative rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-[4/5] shadow-lg transition-all duration-500">
+                <img src="assets/ke" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Bathroom Upgrade">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-8 left-8 right-8 translate-y-6 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 space-y-1">
+                    <p class="text-[10px] font-black text-emerald-400 uppercase tracking-widest">Renovation</p>
+                    <h4 class="text-2xl font-black text-white">Luxury Fixtures</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item pipe group relative rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-[4/5] shadow-lg transition-all duration-500">
+                <img src="assets/re" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Pipe Install">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-8 left-8 right-8 translate-y-6 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 space-y-1">
+                    <p class="text-[10px] font-black text-blue-400 uppercase tracking-widest">New Build</p>
+                    <h4 class="text-2xl font-black text-white">Copper Re-piping</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item heater group relative rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-[4/5] shadow-lg transition-all duration-500">
+                <img src="assets/tank" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Water Heater">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-8 left-8 right-8 translate-y-6 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 space-y-1">
+                    <p class="text-[10px] font-black text-orange-400 uppercase tracking-widest">Upgrade</p>
+                    <h4 class="text-2xl font-black text-white">Tankless Install</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item drain group relative rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-[4/5] shadow-lg transition-all duration-500">
+                <img src="assets/home" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Drain Cleaning">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-8 left-8 right-8 translate-y-6 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 space-y-1">
+                    <p class="text-[10px] font-black text-red-400 uppercase tracking-widest">Maintenance</p>
+                    <h4 class="text-2xl font-black text-white">Hydro-Jetting</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item pipe group relative rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-[4/5] shadow-lg transition-all duration-500">
+                <img src="assets/Gas Line Fitting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Commercial Gas Line">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-8 left-8 right-8 translate-y-6 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 space-y-1">
+                    <p class="text-[10px] font-black text-purple-400 uppercase tracking-widest">Commercial</p>
+                    <h4 class="text-2xl font-black text-white">Gas Line Fitting</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    function filterGallery(category) {
+        const items = document.querySelectorAll('.gallery-item');
+        const buttons = document.querySelectorAll('.filter-btn');
+
+        // Update Button Active State
+        buttons.forEach(btn => {
+            if (btn.getAttribute('data-category') === category) {
+                btn.classList.add('active-filter');
+                btn.classList.remove('bg-gray-50', 'dark:bg-gray-900', 'text-gray-500', 'dark:text-gray-400');
+            } else {
+                btn.classList.remove('active-filter');
+                btn.classList.add('bg-gray-50', 'dark:bg-gray-900', 'text-gray-500', 'dark:text-gray-400');
+            }
+        });
+
+        // Filter Grid Items
+        items.forEach(item => {
+            if (category === 'all' || item.classList.contains(category)) {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+                item.style.pointerEvents = 'auto';
+                item.style.visibility = 'visible';
+            } else {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.9)';
+                item.style.pointerEvents = 'none';
+                setTimeout(() => {
+                    if (item.style.opacity === '0') item.style.visibility = 'hidden';
+                }, 400);
+            }
+        });
+    }
+</script>
+
+<style>
+    /* Utility Styles */
+    .active-filter {
+        background-color: #7C3AED !important;
+        color: white !important;
+        box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.4);
+    }
+    
+    .gallery-item {
+        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+<script>
+    // --- BEFORE/AFTER SLIDER LOGIC (Desktop Only) ---
+    const slider = document.getElementById('before-after-slider');
+    const beforeImageWrapper = document.getElementById('before-image-wrapper');
+    const handle = document.getElementById('slider-handle');
+
+    if (slider && window.innerWidth >= 1024) {
+        const moveSlider = (e) => {
+            const rect = slider.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            
+            // Container boundaries
+            if (x < 0) x = 0;
+            if (x > rect.width) x = rect.width;
+            
+            // Calculate percentage
+            const percentage = (x / rect.width) * 100;
+            
+            // Update width of 'before' overlay and handle position
+            beforeImageWrapper.style.width = `${percentage}%`;
+            handle.style.left = `${percentage}%`;
+        };
+
+        // Event listeners for mouse interaction
+        slider.addEventListener('mousemove', moveSlider);
+        
+        // Mobile/Tablet touch support (Optional, but added hidden fallback is better for UX)
+        slider.addEventListener('touchmove', (e) => {
+            if (e.touches.length > 0) {
+                moveSlider(e.touches[0]);
+            }
+        });
+    }
+</script>
+
+<style>
+    /* Prevent text selection while dragging on desktop */
+    #before-after-slider { user-select: none; }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn { animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+</style>
+
+
+
+<section class="py-12 md:py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="relative bg-primary rounded-[3rem] p-8 md:p-20 text-center overflow-hidden shadow-2xl shadow-purple-500/20 group">
+            
+            <div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl group-hover:scale-150 transition-transform duration-1000"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-secondary/20 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl group-hover:-translate-x-1/4 transition-transform duration-1000"></div>
+            
+            <div class="relative z-10 max-w-3xl mx-auto space-y-8">
+                <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white px-5 py-2 rounded-full font-black text-[10px] uppercase tracking-[0.2em] border border-white/10 animate-pulse">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                    Technicians Live in Your Area
+                </div>
+
+                <h2 class="text-3xl md:text-6xl font-black text-white leading-tight">
+                    Ready to fix that leak? <br>
+                    <span class="text-purple-200 italic">We're on standby 24/7.</span>
+                </h2>
+
+                <p class="text-purple-100/80 text-lg md:text-xl font-medium max-w-xl mx-auto leading-relaxed">
+                    Join over 5,000+ homeowners who trust PlumbFix for lightning-fast repairs and transparent pricing.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="booknow.html">
+                         <button onclick="showTab('booking')" class="w-full sm:w-auto bg-white text-primary px-10 py-5 rounded-2xl font-black text-sm shadow-xl hover:bg-purple-50 hover:scale-105 active:scale-95 transition-all uppercase tracking-widest flex items-center justify-center gap-3">
+                        <i class="fas fa-calendar-plus text-lg"></i>
+                        Book Service
+                    </button>
+                    </a>
+                   
+                    
+                    <a href="contact.html" class="w-full sm:w-auto bg-transparent border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-black text-sm hover:bg-white/10 hover:border-white transition-all uppercase tracking-widest flex items-center justify-center gap-3">
+                        <i class="fas fa-phone-volume animate-bounce text-lg"></i>
+                        Emergency Call
+                    </a>
+                </div>
+
+                <div class="pt-10 flex flex-wrap justify-center gap-8 text-white/50 text-[10px] font-black uppercase tracking-[0.15em]">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-bolt text-yellow-400"></i> 30m Response
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-shield-halved text-emerald-400"></i> Guaranteed Work
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-user-check text-blue-400"></i> Licensed Pros
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+  <footer class="bg-gray-50 dark:bg-gray-950 pt-16 pb-8 border-t dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="space-y-6">
+                <a href="index.html">
+                    <div class="flex items-center gap-2">
+                    <div class="p-2 bg-primary rounded-lg text-white">
+                        <i class="fas fa-faucet-drip text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-primary">PlumbFix</span>
+                </div>
+                </a>
+                
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Premium 24/7 plumbing and home maintenance services. We pride ourselves on fast response times and quality craftsmanship.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b-2 border-primary w-fit">Quick Links</h4>
+                <ul class="space-y-4 text-gray-600 dark:text-gray-400 font-medium">
+                    <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-primary transition">About Us</a></li>
+                    <li><a href="service.html" class="hover:text-primary transition">Our Services</a></li>
+                    <li><a href="gallery.html" class="hover:text-primary transition">Project Gallery</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b-2 border-primary w-fit">Support</h4>
+                <ul class="space-y-4 text-gray-600 dark:text-gray-400 font-medium">
+                    <li><a href="booknow.html" class="hover:text-primary transition">Book Now</a></li>
+                    <li><a href="404.html" class="hover:text-primary transition">Error 404</a></li>
+                    <li><a href="comingsoon.html" class="hover:text-primary transition">Coming Soon</a></li>
+                    <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b-2 border-primary w-fit">Newsletter</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 font-medium">Get tips on maintaining your home plumbing.</p>
+                <div class="relative">
+                    <input type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border dark:bg-gray-800 dark:border-gray-700 focus:ring-2 focus:ring-primary outline-none">
+                    <button class="absolute right-2 top-2 bg-primary text-white p-2 rounded-md hover:bg-secondary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 pt-8 border-t dark:border-gray-800 text-center text-sm text-gray-500">
+            <p>&copy; 2026 PlumbFix Home Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Dark/Light Mode Logic ---
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateThemeIcons('light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateThemeIcons('dark');
+            }
+        }
+
+        function updateThemeIcons(mode) {
+            const icons = [document.getElementById('theme-icon'), document.getElementById('theme-icon-mob')];
+            icons.forEach(icon => {
+                icon.className = mode === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            });
+        }
+
+        // --- LTR/RTL Logic ---
+        function toggleDirection() {
+            const html = document.getElementById('main-html');
+            const dirText = document.getElementById('dir-text');
+            if (html.dir === 'ltr') {
+                html.dir = 'rtl';
+                dirText.innerText = 'RTL';
+                localStorage.setItem('dir', 'rtl');
+            } else {
+                html.dir = 'ltr';
+                dirText.innerText = 'LTR';
+                localStorage.setItem('dir', 'ltr');
+            }
+        }
+
+        // --- Mobile Menu Toggle ---
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('menu-btn');
+            menu.classList.toggle('hidden');
+            btn.classList.toggle('fa-bars');
+            btn.classList.toggle('fa-times');
+        }
+
+        // --- Initialize from Local Storage ---
+        window.onload = () => {
+            // Theme
+            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                updateThemeIcons('dark');
+            }
+            // Direction
+            if (localStorage.getItem('dir') === 'rtl') {
+                document.getElementById('main-html').dir = 'rtl';
+                document.getElementById('dir-text').innerText = 'RTL';
+            }
+        }
+    </script>
+</body>
+</html>

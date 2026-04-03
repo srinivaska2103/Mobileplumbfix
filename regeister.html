@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="main-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%237C3AED' d='M224 96l16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0c-17.7 0-32 14.3-32 32s14.3 32 32 32zM128 160c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160c0 17.7 14.3 32 32 32l32 0 0 48c0 17.7 14.3 32 32 32s32-14.3 32-32l0-48 112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-128zm352 32l-128 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0c17.7 0 32-14.3 32-32s-14.3-32-32-32z'/></svg>">
+    <title>Create Account | PlumbFix 24/7</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6b21a8', 
+                        secondary: '#9333ea',
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.6s ease-out',
+                    },
+                    keyframes: {
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-100 min-h-screen flex flex-col transition-colors duration-300">
+
+    <header class="fixed top-0 w-full z-50 px-4 py-4 md:px-8 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 group">
+            <div class="p-2 bg-primary rounded-lg text-white group-hover:rotate-12 transition-transform">
+                <i class="fas fa-faucet-drip text-xl"></i>
+            </div>
+                    <span class="text-2xl font-bold text-primary dark:text-purple-400">PlumbFix</span>
+        </a>
+
+        <div class="flex items-center gap-2">
+            <button onclick="toggleDirection()" class="p-2 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center justify-center hover:border-primary transition-all">
+                <span id="dir-text" class="text-[10px] font-black uppercase">LTR</span>
+            </button>
+            <button onclick="toggleTheme()" class="p-2 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center justify-center hover:border-primary transition-all text-primary dark:text-purple-400">
+                <i id="theme-icon" class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center px-4 pt-28 pb-12">
+        <div class="w-full max-w-[450px] animate-slide-up">
+            
+            <div class="bg-white dark:bg-gray-900 rounded-[2.5rem] shadow-2xl shadow-purple-500/10 p-8 md:p-10 border border-purple-50 dark:border-gray-800">
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-black text-gray-900 dark:text-white">Create Account</h1>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 font-medium">Join our community for 24/7 priority service</p>
+                </div>
+
+                <form class="space-y-4" onsubmit="return false;">
+                    <div class="space-y-1.5">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Full Name</label>
+                        <div class="relative">
+                            <i class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input type="text" placeholder="Enter Name " 
+                                class="w-full pl-12 pr-4 py-3.5 rounded-2xl border-2 border-gray-50 dark:border-gray-800 dark:bg-gray-950 outline-none focus:border-primary transition-all font-bold dark:text-white">
+                        </div>
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Email Address</label>
+                        <div class="relative">
+                            <i class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input type="email" placeholder="example@gmail.com" 
+                                class="w-full pl-12 pr-4 py-3.5 rounded-2xl border-2 border-gray-50 dark:border-gray-800 dark:bg-gray-950 outline-none focus:border-primary transition-all font-bold dark:text-white">
+                        </div>
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Create Password</label>
+                        <div class="relative">
+                            <i class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input type="password" id="signup-password" placeholder="••••••••" 
+                                class="w-full pl-12 pr-12 py-3.5 rounded-2xl border-2 border-gray-50 dark:border-gray-800 dark:bg-gray-950 outline-none focus:border-primary transition-all font-bold dark:text-white">
+                            <button type="button" onclick="togglePasswordVisibility()" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary">
+                                <i id="eye-icon" class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="py-2">
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mt-1 w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight">
+                                I agree to the <a href="#" class="text-primary font-bold hover:underline">Terms of Service</a> and <a href="#" class="text-primary font-bold hover:underline">Privacy Policy</a>.
+                            </span>
+                        </label>
+                    </div>
+
+                    <button class="w-full bg-primary hover:bg-secondary text-white py-4 md:py-5 rounded-2xl font-black text-lg shadow-xl shadow-purple-200 dark:shadow-none transition-all hover:scale-[1.02] active:scale-95 uppercase tracking-widest">
+                        Get Started
+                    </button>
+                </form>
+
+                <div class="relative my-8">
+                    <div class="absolute inset-0 flex items-center"><span class="w-full border-t dark:border-gray-800"></span></div>
+                    <div class="relative flex justify-center text-[10px] uppercase"><span class="bg-white dark:bg-gray-900 px-4 text-gray-400 font-black tracking-widest">Sign up with</span></div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4">
+                    <button class="flex items-center justify-center py-3 border-2 border-gray-50 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                        <i class="fab fa-google text-lg"></i>
+                    </button>
+                    <button class="flex items-center justify-center py-3 border-2 border-gray-50 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                        <i class="fab fa-apple text-xl"></i>
+                    </button>
+                    <button class="flex items-center justify-center py-3 border-2 border-gray-50 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                        <i class="fab fa-x-twitter text-lg"></i>
+                    </button>
+                </div>
+
+                <p class="text-center mt-8 text-sm font-bold text-gray-500 dark:text-gray-400">
+                    Already have an account? <a href="login.html" class="text-primary hover:underline ml-1">Login here</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // --- Dark/Light Mode ---
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeIcon(isDark);
+        }
+
+        function updateThemeIcon(isDark) {
+            const icon = document.getElementById('theme-icon');
+            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // --- LTR/RTL ---
+        function toggleDirection() {
+            const html = document.getElementById('main-html');
+            const dirText = document.getElementById('dir-text');
+            const newDir = html.dir === 'ltr' ? 'rtl' : 'ltr';
+            html.dir = newDir;
+            dirText.innerText = newDir.toUpperCase();
+            localStorage.setItem('dir', newDir);
+        }
+
+        // --- Password Visibility ---
+        function togglePasswordVisibility() {
+            const pwdInput = document.getElementById('signup-password');
+            const eyeIcon = document.getElementById('eye-icon');
+            if (pwdInput.type === 'password') {
+                pwdInput.type = 'text';
+                eyeIcon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                pwdInput.type = 'password';
+                eyeIcon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+
+        // --- Persistence Logic ---
+        window.onload = () => {
+            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                updateThemeIcon(true);
+            }
+            if (localStorage.getItem('dir')) {
+                const storedDir = localStorage.getItem('dir');
+                document.getElementById('main-html').dir = storedDir;
+                document.getElementById('dir-text').innerText = storedDir.toUpperCase();
+            }
+        };
+    </script>
+</body>
+</html>
