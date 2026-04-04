@@ -30,7 +30,7 @@
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
 
-    <nav class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md">
+   <nav class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <a href="index.html">
@@ -138,9 +138,12 @@
         <button onclick="toggleDirection()" class="w-full border border-primary py-3 rounded-lg font-bold text-primary dark:text-purple-400">
             <i class="fas fa-arrows-left-right mr-2"></i> Switch Direction (LTR/RTL)
         </button>
-        <button class="w-full bg-primary text-white py-3 rounded-lg font-bold">
+        <a href="login.html">
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-bold">
             Login
         </button>
+        </a>
+        
     </div>
 </div>
 <script>
@@ -186,14 +189,22 @@ function toggleMobileDashboard() {
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             
             <div class="space-y-8 text-center lg:text-left animate-fadeIn">
-                <div class="inline-flex items-center gap-2 bg-white dark:bg-gray-900 px-4 py-2 rounded-full shadow-sm border border-purple-100 dark:border-gray-800">
-                    <div class="flex -space-x-2">
-                        <img src="assets/trust1" class="w-6 h-6 rounded-full border-2 border-white dark:border-gray-900">
-                        <img src="assets/trust2" class="w-6 h-6 rounded-full border-2 border-white dark:border-gray-900">
-                        <img src="assets/trust3" class="w-6 h-6 rounded-full border-2 border-white dark:border-gray-900">
-                    </div>
-                    <span class="text-xs font-black text-gray-600 dark:text-gray-400 uppercase tracking-widest">5k+ Happy Customers</span>
-                </div>
+             <div class="inline-flex items-center gap-3 lg:gap-5 bg-white dark:bg-gray-900 px-6 py-2 lg:px-10 lg:py-4 rounded-full shadow-sm border border-purple-100 dark:border-gray-800 transition-all duration-500 lg:mt-2">
+    
+    <div class="flex -space-x-2 lg:-space-x-3">
+        <img src="assets/trust1" class="w-6 h-6 lg:w-9 lg:h-9 rounded-full border-2 border-white dark:border-gray-900 object-cover shadow-sm">
+        <img src="assets/trust2" class="w-6 h-6 lg:w-9 lg:h-9 rounded-full border-2 border-white dark:border-gray-900 object-cover shadow-sm">
+        <img src="assets/trust3" class="w-6 h-6 lg:w-9 lg:h-9 rounded-full border-2 border-white dark:border-gray-900 object-cover shadow-sm">
+        
+        <div class="w-6 h-6 lg:w-9 lg:h-9 rounded-full border-2 border-white dark:border-gray-900 bg-primary/10 flex items-center justify-center text-[8px] lg:text-[11px] font-black text-primary">
+            +
+        </div>
+    </div>
+
+    <span class="text-[10px] lg:text-sm font-black text-gray-700 dark:text-gray-300 uppercase tracking-widest lg:tracking-[0.25em]">
+        5k+ Happy Customers
+    </span>
+</div>
 
                 <h1 class="text-4xl md:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white leading-[1.1]">
                     Trusted 24/7 <br class="hidden md:block"> 
@@ -217,41 +228,32 @@ function toggleMobileDashboard() {
                     </a>
                 </div>
 
-                <!-- <div class="pt-8 grid grid-cols-2 md:grid-cols-3 gap-4 border-t border-gray-200 dark:border-gray-800">
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-clock text-primary"></i>
-                        <span class="text-xs font-bold text-gray-500 dark:text-gray-400">30 Min Arrival</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-shield-check text-primary"></i>
-                        <span class="text-xs font-bold text-gray-500 dark:text-gray-400">Licensed Pros</span>
-                    </div>
-                    <div class="flex items-center gap-3 col-span-2 md:col-span-1">
-                        <i class="fas fa-tag text-primary"></i>
-                        <span class="text-xs font-bold text-gray-500 dark:text-gray-400">Upfront Quotes</span>
-                    </div>
-                </div> -->
+              
             </div>
 
-            <div class="relative hidden lg:block animate-fadeIn">
-                <div class="relative rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white dark:border-gray-900 rotate-2 group hover:rotate-0 transition-transform duration-700">
-                    <img src="assets/abthero" 
-                         class="w-full h-[600px] object-cover group-hover:scale-110 transition-transform duration-1000" alt="Professional Plumber">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
-                </div>
+            <div class="relative hidden lg:block animate-fadeIn pr-4 lg:pr-8">
+    <div class="relative rounded-[3rem] lg:rounded-[4rem] overflow-hidden shadow-2xl border-[8px] lg:border-[12px] border-white dark:border-gray-900 lg:rotate-1 xl:rotate-2 group hover:rotate-0 transition-transform duration-700">
+        
+        <img src="assets/abthero" 
+             class="w-full h-[500px] xl:h-[600px] object-cover group-hover:scale-110 transition-transform duration-1000" 
+             alt="Professional Plumber">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+    </div>
 
-                <div class="absolute -bottom-6 -left-12 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl p-6 rounded-[2.5rem] shadow-2xl border border-white/50 dark:border-gray-800 animate-bounce-slow">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/30">
-                            <i class="fas fa-check"></i>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-black text-gray-400 uppercase tracking-tighter">Availability Today</p>
-                            <p class="text-lg font-black dark:text-white">12 Pros Nearby</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="absolute -bottom-6 left-0 xl:-left-12 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl p-5 lg:p-6 rounded-[2rem] lg:rounded-[2.5rem] shadow-2xl border border-white/50 dark:border-gray-800 animate-bounce-slow z-20">
+        <div class="flex items-center gap-3 lg:gap-4">
+            <div class="w-10 h-10 lg:w-12 lg:h-12 bg-emerald-500 text-white rounded-xl lg:rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/30 shrink-0">
+                <i class="fas fa-check text-sm lg:text-base"></i>
             </div>
+            
+            <div class="whitespace-nowrap">
+                <p class="text-[9px] lg:text-[10px] font-black text-gray-400 uppercase tracking-tighter leading-none mb-1">Availability Today</p>
+                <p class="text-base lg:text-lg font-black dark:text-white leading-tight">12 Pros Nearby</p>
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
     </div>
@@ -434,71 +436,75 @@ function toggleMobileDashboard() {
             </p>
         </div>
 
+        <section class="py-12 md:py-24 bg-white dark:bg-gray-950 px-4 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto">
+        
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             
-            <div class="lg:col-span-2 group bg-[#F5F3FF] dark:bg-purple-900/10 p-8 md:p-12 rounded-[3rem] border border-transparent hover:border-primary/20 transition-all duration-500 relative overflow-hidden">
+            <div class="md:col-span-2 group bg-slate-50 dark:bg-primary/5 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-transparent hover:border-primary/20 transition-all duration-500 relative overflow-hidden flex flex-col justify-center min-h-[300px]">
                 <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
-                    <div class="space-y-4">
-                        <div class="w-16 h-16 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary shadow-sm group-hover:scale-110 transition-transform">
-                            <i class="fas fa-stopwatch text-3xl"></i>
+                    <div class="space-y-6">
+                        <div class="w-16 h-16 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                            <i class="fas fa-bolt-lightning text-3xl"></i>
                         </div>
-                        <h3 class="text-3xl font-black text-gray-900 dark:text-white">30-Minute Response</h3>
-                        <p class="text-gray-600 dark:text-gray-400 font-medium max-w-sm">
-                            In a plumbing emergency, every second counts. We guarantee a technician at your door in <strong>30 minutes or less</strong>.
-                        </p>
+                        <div class="space-y-2">
+                            <h3 class="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 dark:text-white leading-tight">⏱ 30-Minute Response</h3>
+                            <p class="text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-400 font-medium max-w-sm leading-relaxed">
+                                In a plumbing emergency, every second counts. We guarantee a certified technician at your door in <strong>30 minutes or less</strong>.
+                            </p>
+                        </div>
                     </div>
-                    <div class="hidden md:block">
-                        <div class="text-7xl font-black text-primary/10 group-hover:text-primary/20 transition-colors">00:30</div>
+                    <div class="hidden md:block select-none">
+                        <div class="text-7xl lg:text-8xl font-black text-primary/5 group-hover:text-primary/10 transition-colors tracking-tighter">00:30</div>
                     </div>
                 </div>
             </div>
 
-            <div class="group bg-white dark:bg-gray-900 p-8 rounded-[3rem] border border-gray-100 dark:border-gray-800 hover:shadow-2xl transition-all duration-500 text-center flex flex-col justify-center items-center">
+            <div class="group bg-white dark:bg-gray-900 p-8 rounded-[2.5rem] md:rounded-[3rem] border border-gray-100 dark:border-gray-800 hover:shadow-2xl transition-all duration-500 text-center flex flex-col justify-center items-center">
                 <div class="flex gap-1 text-yellow-400 mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <h3 class="text-4xl font-black text-gray-900 dark:text-white mb-2">4.9/5</h3>
+                <h3 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-2">4.9/5</h3>
                 <p class="text-xs font-black text-gray-400 uppercase tracking-widest">Customer Rating</p>
-                <div class="mt-6 py-2 px-4 bg-gray-50 dark:bg-gray-800 rounded-full text-[10px] font-bold text-gray-500">Based on 2,400+ Reviews</div>
+                <div class="mt-6 py-2 px-6 bg-emerald-50 dark:bg-emerald-500/10 rounded-full text-[10px] font-black text-emerald-600 uppercase tracking-widest border border-emerald-100 dark:border-emerald-900/20">
+                    5,000+ Verified Reviews
+                </div>
             </div>
 
-            <div class="group bg-white dark:bg-gray-900 p-8 rounded-[3rem] border border-gray-100 dark:border-gray-800 hover:border-primary/30 transition-all duration-500 flex flex-col justify-between">
-                <div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center text-blue-500 text-2xl mb-6 group-hover:rotate-12 transition-transform">
+            <div class="group bg-white dark:bg-gray-900 p-8 rounded-[2.5rem] md:rounded-[3rem] border border-gray-100 dark:border-gray-800 hover:border-primary/30 transition-all duration-500 flex flex-col justify-between shadow-sm hover:shadow-xl">
+                <!-- <div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center text-blue-500 text-2xl mb-6 group-hover:rotate-12 transition-transform shadow-inner">
                     <i class="fas fa-user-shield"></i>
-                </div>
+                </div> -->
                 <div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Certified Technicians</h3>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Background-checked, licensed, and continuously trained experts.</p>
+                    <h3 class="text-xl font-black text-gray-900 dark:text-white mb-2">🛠 Certified Pros</h3>
+                    <p class="text-sm md:text-base text-gray-500 dark:text-gray-400 font-medium leading-relaxed">Background-checked, licensed, and continuously trained experts.</p>
                 </div>
             </div>
 
-            <div class="group bg-white dark:bg-gray-900 p-8 rounded-[3rem] border border-gray-100 dark:border-gray-800 hover:border-primary/30 transition-all duration-500 flex flex-col justify-between">
-                <div class="w-14 h-14 bg-green-50 dark:bg-green-900/20 rounded-2xl flex items-center justify-center text-green-500 text-2xl mb-6 group-hover:scale-110 transition-transform">
+            <div class="group bg-white dark:bg-gray-900 p-8 rounded-[2.5rem] md:rounded-[3rem]  shadow-xl border border-gray-100 dark:border-gray-800 hover:border-emerald-500/30 transition-all duration-500 flex flex-col  md:flex-row md:items-center gap-6 md:gap-10 relative overflow-hidden md:col-span-2 lg:col-span-1">
+                <!-- <div class="w-14 h-14 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl flex items-center justify-center text-emerald-500 text-2xl mb-6 group-hover:rotate-12 transition-transform shadow-inner">
                     <i class="fas fa-hand-holding-dollar"></i>
-                </div>
+                </div> -->
                 <div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Transparent Pricing</h3>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Upfront fixed quotes before we start. No hidden fees or surprises.</p>
+                    <h3 class="text-xl font-black text-gray-900 dark:text-white mb-2">💰 Fair Pricing</h3>
+                    <p class="text-sm md:text-base text-gray-500 dark:text-gray-400 font-medium leading-relaxed">Upfront fixed quotes before we start. No hidden fees or surprises.</p>
                 </div>
             </div>
 
-           <div class="group bg-primary p-8 md:p-10 rounded-[3rem] shadow-xl shadow-purple-500/20 hover:-translate-y-2 transition-all duration-500 flex flex-col md:flex-row md:items-center gap-6 md:gap-10 relative overflow-hidden md:col-span-2 lg:col-span-1">
-    
-    <i class="fas fa-headset absolute -right-4 -bottom-4 text-8xl text-white/10 group-hover:rotate-12 group-hover:-translate-x-4 transition-all duration-700"></i>
-    
-    <div class="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-md rounded-[2rem] flex items-center justify-center text-white text-2xl md:text-3xl shrink-0 z-10">
-        <i class="fas fa-phone-volume animate-pulse"></i>
-    </div>
-
-    <div class="relative z-10 space-y-2">
-        <h3 class="text-xl md:text-3xl font-black text-white leading-tight">24/7 Availability</h3>
-        <p class="text-sm md:text-base text-purple-100 opacity-90 font-medium max-w-md">
-            Day, night, or holiday—our emergency dispatch team is always awake to take your call and send a technician immediately.
-        </p>
-    </div>
-</div>
+            <div class="group bg-primary p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] shadow-xl shadow-purple-500/20 hover:-translate-y-2 transition-all duration-500 flex flex-col md:flex-row md:items-center gap-6 md:gap-10 relative overflow-hidden md:col-span-2 lg:col-span-1">
+                <i class="fas fa-headset absolute -right-4 -bottom-4 text-9xl text-white/10 group-hover:rotate-12 transition-transform duration-700"></i>
+                
+               
+                
+                <div class="relative z-10">
+                    <h3 class="text-xl md:text-2xl font-black text-white mb-2">📞 24/7 Support</h3>
+                    <p class="text-sm md:text-base text-purple-100 opacity-90 font-medium">Day, night, or holiday—we are always awake to take your emergency call.</p>
+                </div>
+            </div>
 
         </div>
+    </div>
+</section>
     </div>
 </section>
 <section class="py-24 bg-gray-50 dark:bg-gray-950 transition-colors duration-300 overflow-hidden">
@@ -612,73 +618,72 @@ function toggleMobileDashboard() {
         </div>
     </div>
 </section>
-<section class="py-24 bg-white dark:bg-gray-950 transition-colors duration-300 overflow-hidden">
+<section class="py-12 md:py-24 bg-white dark:bg-gray-950 transition-colors duration-300 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
             
-            <div class="space-y-8 order-2 lg:order-1">
+            <div class="space-y-6 md:space-y-8 order-2 lg:order-1">
                 <div class="space-y-4">
-                    <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.2em] uppercase text-xs text-center lg:text-left">Coverage Map</h2>
-                    <h3 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white text-center lg:text-left">
-                        We’re Just a <span class="text-primary">Call</span> Away
+                    <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs text-center lg:text-left">Coverage Map</h2>
+                    <h3 class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white text-center lg:text-left leading-tight">
+                        We’re Just a <span class="text-primary italic">Call</span> Away
                     </h3>
-                    <p class="text-gray-500 dark:text-gray-400 font-medium text-center lg:text-left">
-
-http://googleusercontent.com/map_location_reference/1
-                        Operating across [Tamil Nadu](http://googleusercontent.com/map_location_reference/0) and surrounding major hubs. Check your neighborhood below.
+                    <p class="text-sm md:text-lg text-gray-500 dark:text-gray-400 font-medium text-center lg:text-left leading-relaxed">
+                        Operating across <span class="text-primary font-bold">Tamil Nadu</span> and surrounding major hubs. Check your neighborhood below.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="group flex items-center gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-transparent hover:border-primary/30 hover:bg-white dark:hover:bg-gray-800 transition-all cursor-default">
-                        <div class="w-2 h-2 bg-emerald-500 rounded-full group-hover:scale-150 transition-transform"></div>
-                        <span class="font-bold text-gray-700 dark:text-gray-300">Chennai Central</span>
+                <div class="grid grid-cols-2 gap-3 md:gap-4">
+                    <div class="group flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-transparent hover:border-primary/30 transition-all">
+                        <div class="w-2 h-2 bg-emerald-500 rounded-full group-hover:scale-150 transition-transform shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+                        <span class="font-bold text-xs md:text-base text-gray-700 dark:text-gray-300">Chennai</span>
                     </div>
-                    <div class="group flex items-center gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-transparent hover:border-primary/30 hover:bg-white dark:hover:bg-gray-800 transition-all cursor-default">
-                        <div class="w-2 h-2 bg-emerald-500 rounded-full group-hover:scale-150 transition-transform"></div>
-                        <span class="font-bold text-gray-700 dark:text-gray-300">Coimbatore</span>
+                    <div class="group flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-transparent hover:border-primary/30 transition-all">
+                        <div class="w-2 h-2 bg-emerald-500 rounded-full group-hover:scale-150 transition-transform shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+                        <span class="font-bold text-xs md:text-base text-gray-700 dark:text-gray-300">Coimbatore</span>
                     </div>
-                    <div class="group flex items-center gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-transparent hover:border-primary/30 hover:bg-white dark:hover:bg-gray-800 transition-all cursor-default">
-                        <div class="w-2 h-2 bg-emerald-500 rounded-full group-hover:scale-150 transition-transform"></div>
-                        <span class="font-bold text-gray-700 dark:text-gray-300">Madurai</span>
+                    <div class="group flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-transparent hover:border-primary/30 transition-all">
+                        <div class="w-2 h-2 bg-emerald-500 rounded-full group-hover:scale-150 transition-transform shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+                        <span class="font-bold text-xs md:text-base text-gray-700 dark:text-gray-300">Madurai</span>
                     </div>
-                    <div class="group flex items-center gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-transparent hover:border-primary/30 hover:bg-white dark:hover:bg-gray-800 transition-all cursor-default">
-                        <div class="w-2 h-2 bg-emerald-500 rounded-full group-hover:scale-150 transition-transform"></div>
-                        <span class="font-bold text-gray-700 dark:text-gray-300">Salem District</span>
+                    <div class="group flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-transparent hover:border-primary/30 transition-all">
+                        <div class="w-2 h-2 bg-emerald-500 rounded-full group-hover:scale-150 transition-transform shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+                        <span class="font-bold text-xs md:text-base text-gray-700 dark:text-gray-300">Salem</span>
                     </div>
                 </div>
 
-                <div class="bg-primary/5 dark:bg-primary/10 p-6 rounded-3xl border border-primary/10 flex items-center justify-between gap-4">
-                    <p class="text-sm font-bold text-gray-600 dark:text-gray-300">Don't see your area?</p>
-                    <button class="text-xs font-black text-primary uppercase tracking-widest hover:underline">Request Coverage</button>
+                <div class="bg-primary/5 dark:bg-primary/10 p-4 md:p-6 rounded-[2rem] border border-primary/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                    <p class="text-xs md:text-sm font-bold text-gray-600 dark:text-gray-300">Don't see your area?</p>
+                    <button class="text-[10px] font-black text-primary uppercase tracking-widest hover:underline active:scale-95 transition-transform">Request Coverage</button>
                 </div>
             </div>
 
             <div class="relative order-1 lg:order-2 animate-fadeIn">
-                <div class="relative w-full aspect-square md:aspect-video lg:aspect-square bg-slate-200 dark:bg-gray-800 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-gray-900">
+                <div class="relative w-full aspect-square bg-slate-200 dark:bg-gray-800 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white dark:border-gray-900">
+                    
                     <div class="absolute inset-0 bg-[url('https://api.mapbox.com/styles/v1/mapbox/light-v10/static/78.65,11.12,6,0/600x600?access_token=YOUR_TOKEN')] bg-cover bg-center opacity-60 dark:opacity-40"></div>
                     
-                    <div class="absolute top-1/4 left-1/3">
-                        <span class="flex h-6 w-6">
+                    <div class="absolute top-1/3 left-1/4">
+                        <span class="flex h-5 w-5 md:h-6 md:w-6">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-6 w-6 bg-primary border-4 border-white dark:border-gray-900"></span>
+                            <span class="relative inline-flex rounded-full h-5 w-5 md:h-6 md:w-6 bg-primary border-2 md:border-4 border-white dark:border-gray-900"></span>
                         </span>
                     </div>
-                    <div class="absolute bottom-1/3 right-1/4">
-                        <span class="flex h-6 w-6">
+                    <div class="absolute bottom-1/4 right-1/3">
+                        <span class="flex h-5 w-5 md:h-6 md:w-6">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-6 w-6 bg-primary border-4 border-white dark:border-gray-900"></span>
+                            <span class="relative inline-flex rounded-full h-5 w-5 md:h-6 md:w-6 bg-primary border-2 md:border-4 border-white dark:border-gray-900"></span>
                         </span>
                     </div>
 
-                    <div class="absolute bottom-6 left-6 right-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-white/50 dark:border-gray-700 flex items-center gap-4">
-                        <div class="w-10 h-10 bg-emerald-500 text-white rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
-                            <i class="fas fa-truck-fast"></i>
+                    <div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md p-4 md:p-5 rounded-2xl shadow-xl border border-white/50 dark:border-gray-700 flex items-center gap-3 md:gap-4">
+                        <div class="w-10 h-10 shrink-0 bg-emerald-500 text-white rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
+                            <i class="fas fa-truck-fast text-sm"></i>
                         </div>
                         <div>
-                            <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Real-time Status</p>
-                            <p class="text-sm font-black dark:text-white">Technicians active in all zones</p>
+                            <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Real-time Status</p>
+                            <p class="text-xs md:text-sm font-black dark:text-white leading-tight">Technicians active in all zones</p>
                         </div>
                     </div>
                 </div>
