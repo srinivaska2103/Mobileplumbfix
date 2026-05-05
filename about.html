@@ -74,12 +74,19 @@
 </script>
 
                 <div class="hidden lg:flex items-center space-x-4">
-                    <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
-                        <i id="theme-icon" class="fas fa-moon"></i>
-                    </button>
-                    <button onclick="toggleDirection()" class="text-xs font-bold border border-primary px-2 py-1 rounded">
-                        <span id="dir-text">LTR</span>
-                    </button>
+                   <div class="flex items-center gap-3">
+    <!-- Theme Toggle Button -->
+    <button onclick="toggleTheme()" 
+            class="h-10 w-10 flex items-center justify-center rounded-lg border border-primaryPurple text-primaryPurple hover:bg-primaryPurple hover:text-white dark:hover:bg-softPurple dark:border-softPurple transition-all">
+        <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
+
+    <!-- Direction Toggle Button -->
+    <button onclick="toggleDirection()" 
+            class="h-10 w-10 flex items-center justify-center text-xs font-bold border border-primaryPurple text-primaryPurple rounded-lg hover:bg-primaryPurple hover:text-white transition-all uppercase">
+        <span id="dir-text">LTR</span>
+    </button>
+</div>
                     <div class="hidden lg:flex items-center space-x-4">
     
     <a href="login.html" class="px-6 py-2 border-2 border-primary text-primary dark:text-purple-400 font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300">
@@ -208,7 +215,7 @@ function toggleMobileDashboard() {
 
                 <h1 class="text-4xl md:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white leading-[1.1]">
                     Trusted 24/7 <br class="hidden md:block"> 
-                    <span class="text-primary italic">Plumbing Experts</span> <br> 
+                    <span class="text-primary ">Plumbing Experts</span> <br> 
                     You Can Rely On
                 </h1>
 
@@ -284,12 +291,7 @@ function toggleMobileDashboard() {
                     <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
 
-                <div class="absolute -top-10 -right-4 md:-right-10 bg-primary p-8 rounded-[2.5rem] shadow-2xl shadow-primary/40 animate-bounce-slow">
-                    <div class="text-center space-y-1">
-                        <p class="text-4xl font-black text-white">10+</p>
-                        <p class="text-[10px] font-bold text-purple-200 uppercase tracking-widest leading-tight">Years of<br>Reliability</p>
-                    </div>
-                </div>
+                
 
                 <div class="absolute -bottom-8 left-10 bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-xl border border-purple-50 dark:border-gray-700 hidden md:flex items-center gap-4">
                     <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-xl">
@@ -304,7 +306,7 @@ function toggleMobileDashboard() {
             <div class="space-y-8 order-1 lg:order-2">
                 <div class="space-y-4">
                     <h2 class="text-primary dark:text-purple-400 font-bold tracking-widest uppercase text-sm">The Journey</h2>
-                    <h3 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight">
+                    <h3 class="text-4xl md:text-5xl font-semibold text-gray-900 dark:text-white leading-tight">
                         Built from a Simple <span class="text-primary">Frustration</span>
                     </h3>
                     <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
@@ -356,7 +358,7 @@ function toggleMobileDashboard() {
         
         <div class="text-center mb-16 space-y-4">
             <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.3em] uppercase text-xs">Our Purpose</h2>
-            <p class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white">Driven by <span class="text-primary">Excellence</span></p>
+            <p class="text-3xl md:text-5xl font-semibold text-gray-900 dark:text-white">Driven by <span class="text-primary">Excellence</span></p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
@@ -431,7 +433,7 @@ function toggleMobileDashboard() {
         
         <div class="text-center mb-16 space-y-4">
             <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.2em] uppercase text-xs">Why Choose PlumbFix</h2>
-            <p class="text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight">
+            <p class="text-4xl md:text-6xl font-semibold text-gray-900 dark:text-white leading-tight">
                 Built on <span class="text-primary">Trust</span> & Speed
             </p>
         </div>
@@ -511,8 +513,8 @@ function toggleMobileDashboard() {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center mb-16 space-y-4 max-w-2xl mx-auto">
-            <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.2em] uppercase text-xs">The Experts Behind PlumbFix</h2>
-            <p class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight">
+            <h2 class="text-primary dark:text-purple-400 font-se tracking-[0.2em] uppercase text-xs">The Experts Behind PlumbFix</h2>
+            <p class="text-4xl md:text-5xl font-se text-gray-900 dark:text-white leading-tight">
                 Meet Your <span class="text-primary">Trusted</span> Techs
             </p>
             <p class="text-base text-gray-500 dark:text-gray-400 font-medium pt-2">
@@ -626,8 +628,8 @@ function toggleMobileDashboard() {
             <div class="space-y-6 md:space-y-8 order-2 lg:order-1">
                 <div class="space-y-4">
                     <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs text-center lg:text-left">Coverage Map</h2>
-                    <h3 class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white text-center lg:text-left leading-tight">
-                        We’re Just a <span class="text-primary italic">Call</span> Away
+                    <h3 class="text-3xl md:text-5xl font-se text-gray-900 dark:text-white text-center lg:text-left leading-tight">
+                        We’re Just a <span class="text-primary ">Call</span> Away
                     </h3>
                     <p class="text-sm md:text-lg text-gray-500 dark:text-gray-400 font-medium text-center lg:text-left leading-relaxed">
                         Operating across <span class="text-primary font-bold">Tamil Nadu</span> and surrounding major hubs. Check your neighborhood below.
@@ -706,7 +708,7 @@ function toggleMobileDashboard() {
                     Live Support Online
                 </div>
 
-                <h2 class="text-3xl md:text-6xl font-black text-white leading-tight">
+                <h2 class="text-3xl md:text-6xl font-se text-white leading-tight">
                     Need Help Now? <br>
                     <span class="text-purple-200">Our Experts Are <br class="md:hidden"> Available 24/7</span>
                 </h2>
@@ -717,14 +719,14 @@ function toggleMobileDashboard() {
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                     <a href="booknow.html">
-                        <button onclick="showTab('booking')" class="w-full sm:w-auto bg-white text-primary px-10 py-5 rounded-2xl font-black text-sm shadow-xl hover:bg-purple-50 hover:scale-105 active:scale-95 transition-all uppercase tracking-widest flex items-center justify-center gap-3">
+                        <button onclick="showTab('booking')" class="w-full sm:w-auto bg-white text-primary px-10 py-5 rounded-2xl font-se text-sm shadow-xl hover:bg-purple-50 hover:scale-105 active:scale-95 transition-all uppercase tracking-widest flex items-center justify-center gap-3">
                         <i class="fas fa-calendar-check text-lg"></i>
                         Book Service
                     </button>
                     </a>
                     
                     
-                    <a href="contact.html" class="w-full sm:w-auto bg-primary border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-black text-sm hover:bg-white/10 transition-all uppercase tracking-widest flex items-center justify-center gap-3">
+                    <a href="contact.html" class="w-full sm:w-auto bg-primary border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-semibold text-sm hover:bg-white/10 transition-all uppercase tracking-widest flex items-center justify-center gap-3">
                         <i class="fas fa-phone-volume animate-bounce text-lg"></i>
                         Call Now
                     </a>

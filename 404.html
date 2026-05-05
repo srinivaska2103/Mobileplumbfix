@@ -31,14 +31,19 @@
                     <span class="text-2xl font-bold text-primary dark:text-purple-400">PlumbFix</span>
         </a>
 
-        <div class="flex items-center gap-2">
-            <button onclick="toggleDirection()" class="p-2 w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gray-50 dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center justify-center hover:border-primary transition-all">
-                <span id="dir-text" class="text-[10px] font-black uppercase">LTR</span>
-            </button>
-            <button onclick="toggleTheme()" class="p-2 w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gray-50 dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center justify-center hover:border-primary transition-all text-primary dark:text-purple-400">
-                <i id="theme-icon" class="fas fa-moon"></i>
-            </button>
-        </div>
+                        <div class="flex items-center gap-3">
+    <!-- Theme Toggle Button -->
+    <button onclick="toggleTheme()" 
+            class="h-10 w-10 flex items-center justify-center rounded-lg border border-primaryPurple text-primaryPurple hover:bg-primaryPurple hover:text-white dark:hover:bg-softPurple dark:border-softPurple transition-all">
+        <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
+
+    <!-- Direction Toggle Button -->
+    <button onclick="toggleDirection()" 
+            class="h-10 w-10 flex items-center justify-center text-xs font-bold border border-primaryPurple text-primaryPurple rounded-lg hover:bg-primaryPurple hover:text-white transition-all uppercase">
+        <span id="dir-text">LTR</span>
+    </button>
+</div>
     </header>
 
     <main class="flex-grow flex items-center justify-center px-4 relative">
@@ -58,17 +63,17 @@
             </div>
 
             <div class="space-y-4 px-4">
-                <h2 class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white">Oops! This link is leaking.</h2>
+                <h2 class="text-3xl md:text-5xl font-semibold text-gray-900 dark:text-white">Oops! This link is leaking.</h2>
                 <p class="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-medium max-w-md mx-auto">
                     The page you are looking for has been washed away or never existed in our plumbing system.
                 </p>
             </div>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="index.html" class="w-full sm:w-auto bg-primary hover:bg-secondary text-white px-10 py-5 rounded-2xl font-black text-lg shadow-xl shadow-purple-200 dark:shadow-none transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-3">
+                <a href="index.html" class="w-full sm:w-auto bg-primary hover:bg-secondary text-white px-10 py-5 rounded-2xl font-semibold text-lg shadow-xl shadow-purple-200 dark:shadow-none transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-3">
                     <i class="fas fa-house"></i> Back to Home
                 </a>
-                <a href="contact.html" class="w-full sm:w-auto bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 text-gray-700 dark:text-gray-300 px-10 py-5 rounded-2xl font-black text-lg hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-3">
+                <a href="contact.html" class="w-full sm:w-auto bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 text-gray-700 dark:text-gray-300 px-10 py-5 rounded-2xl font-semibold text-lg hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-3">
                     Report Issue <i class="fas fa-wrench"></i>
                 </a>
             </div>

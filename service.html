@@ -30,7 +30,7 @@
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
 
-    <nav class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md">
+   <nav class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <a href="index.html">
@@ -74,12 +74,19 @@
 </script>
 
                 <div class="hidden lg:flex items-center space-x-4">
-                    <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
-                        <i id="theme-icon" class="fas fa-moon"></i>
-                    </button>
-                    <button onclick="toggleDirection()" class="text-xs font-bold border border-primary px-2 py-1 rounded">
-                        <span id="dir-text">LTR</span>
-                    </button>
+                   <div class="flex items-center gap-3">
+    <!-- Theme Toggle Button -->
+    <button onclick="toggleTheme()" 
+            class="h-10 w-10 flex items-center justify-center rounded-lg border border-primaryPurple text-primaryPurple hover:bg-primaryPurple hover:text-white dark:hover:bg-softPurple dark:border-softPurple transition-all">
+        <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
+
+    <!-- Direction Toggle Button -->
+    <button onclick="toggleDirection()" 
+            class="h-10 w-10 flex items-center justify-center text-xs font-bold border border-primaryPurple text-primaryPurple rounded-lg hover:bg-primaryPurple hover:text-white transition-all uppercase">
+        <span id="dir-text">LTR</span>
+    </button>
+</div>
                     <div class="hidden lg:flex items-center space-x-4">
     
     <a href="login.html" class="px-6 py-2 border-2 border-primary text-primary dark:text-purple-400 font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300">
@@ -299,8 +306,8 @@ function toggleMobileDashboard() {
         <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 md:mb-16">
             <div class="max-w-2xl space-y-4">
                 <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs">What We Do</h2>
-                <p class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight">
-                    Comprehensive Solutions for <span class="text-primary italic text-nowrap">Every Pipe</span>
+                <p class="text-3xl md:text-5xl font-semibold text-gray-900 dark:text-white leading-tight">
+                    Comprehensive Solutions for <span class="text-primary text-nowrap">Every Pipe</span>
                 </p>
             </div>
             <p class="text-slate-500 dark:text-slate-400 font-medium max-w-xs text-sm md:text-base border-l-2 border-primary/20 pl-4">
@@ -362,8 +369,8 @@ function toggleMobileDashboard() {
         
         <div class="text-center mb-16 space-y-4 max-w-3xl mx-auto animate-fadeIn">
             <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.2em] uppercase text-xs">Our Specialty</h2>
-            <p class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight">
-                Complete Plumbing <span class="text-primary italic">Dominance</span>
+            <p class="text-4xl md:text-5xl font-semibold text-gray-900 dark:text-white leading-tight">
+                Complete Plumbing <span class="text-primary ">Dominance</span>
             </p>
             <p class="text-lg text-gray-500 dark:text-gray-400 font-medium pt-2">
                 Certified experts handling everything from silent leaks to emergency bursts, 24/7.
@@ -444,7 +451,7 @@ function toggleMobileDashboard() {
         
         <div class="text-center mb-20 space-y-4">
             <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.3em] uppercase text-[10px]">The Process</h2>
-            <p class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white">Three Simple <span class="text-primary italic">Steps</span></p>
+            <p class="text-4xl md:text-5xl font-semibold text-gray-900 dark:text-white">Three Simple <span class="text-primary ">Steps</span></p>
         </div>
 
         <div class="relative">
@@ -509,7 +516,7 @@ function toggleMobileDashboard() {
         
         <div class="text-center mb-16 space-y-4">
             <h2 class="text-primary dark:text-purple-400 font-bold tracking-[0.3em] uppercase text-[10px]">The PlumbFix Advantage</h2>
-            <p class="text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight">
+            <p class="text-4xl md:text-6xl font-semibold text-gray-900 dark:text-white leading-tight">
                 Built on <span class="text-primary">Reliability</span>
             </p>
         </div>
@@ -602,9 +609,9 @@ function toggleMobileDashboard() {
                     Live Dispatch: 12 Techs Available
                 </div>
 
-                <h2 class="text-3xl md:text-6xl font-black text-white leading-tight">
+                <h2 class="text-3xl md:text-6xl font-semibold text-white leading-tight">
                     Don't Wait for a <br>
-                    <span class="text-purple-200 italic">Plumbing Disaster.</span>
+                    <span class="text-purple-200 ">Plumbing Disaster.</span>
                 </h2>
 
                 <p class="text-purple-100/80 text-lg md:text-xl font-medium max-w-xl mx-auto leading-relaxed">
