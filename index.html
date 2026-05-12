@@ -737,98 +737,93 @@ function toggleMobileDashboard() {
         </div>
     </div>
 </section>
-<section class="py-24 bg-gray-50 dark:bg-gray-950 transition-colors duration-300 overflow-hidden">
+<section class="py-16 bg-vLightBg dark:bg-gray-950 transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center mb-16 space-y-4">
-            <h2 class="text-primary dark:text-purple-400 font-bold tracking-widest uppercase text-sm">Real Stories</h2>
-            <p class="text-4xl md:text-5xl font-semibold text-gray-900 dark:text-white">What Our Customers Say</p>
-            <div class="flex justify-center gap-1 text-yellow-400 text-xl">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-primaryPurple font-bold uppercase tracking-widest text-sm mb-3">Testimonials</h2>
+            <p class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white">What Our Customers Say</p>
+        </div>
+
+        <!-- Perfected Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+            
+            <!-- Testimonial Card Structure (Applied to all 3) -->
+            <div class="group bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 relative flex flex-col">
+                
+                <!-- UPDATED QUOTE ICON: Black in Light Mode, Light Purple in Dark Mode -->
+                <div class="absolute -top-5 -right-2 w-14 h-14 bg-primaryPurple rounded-2xl flex items-center justify-center shadow-xl transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 ring-4 ring-white dark:ring-gray-800 z-10">
+                    <i class="fas fa-quote-right text-2xl text-black dark:text-purple-100 drop-shadow-sm"></i>
+                </div>
+
+                <!-- Star Rating -->
+                <div class="flex gap-1 text-yellow-400 mb-6">
+                    <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+                </div>
+
+                <!-- Content -->
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8 italic flex-grow">
+                    "Woke up to a flooded kitchen at 3 AM. PlumbFix arrived in 20 minutes and fixed the burst pipe immediately. Truly life-savers!"
+                </p>
+
+                <!-- Footer -->
+                <div class="flex items-center gap-4 pt-6 border-t border-gray-100 dark:border-gray-700">
+                    <img src="https://ui-avatars.com/api/?name=Sarah+Jenkins&background=7C3AED&color=fff" class="w-14 h-14 rounded-full object-cover border-2 border-primaryPurple/20" alt="Sarah Jenkins">
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white">Sarah Jenkins</h4>
+                        <span class="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-tighter flex items-center gap-1">
+                            <i class="fas fa-check-circle"></i> Verified Homeowner
+                        </span>
+                    </div>
+                </div>
             </div>
-            <p class="text-gray-500 dark:text-gray-400 font-bold italic">4.9/5 Average Rating based on 2,500+ Reviews</p>
-        </div>
 
-       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-    
-    <!-- Testimonial 1 -->
-    <div class="group bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 relative flex flex-col">
-        <div class="absolute -top-4 -right-4 w-12 h-12 bg-primaryPurple text-white rounded-2xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform">
-            <i class="fas fa-quote-right text-xl"></i>
-        </div>
-
-        <div class="flex gap-1 text-yellow-400 mb-6">
-            <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
-        </div>
-
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8 italic flex-grow">
-            "Woke up to a flooded kitchen at 3 AM. PlumbFix arrived in 20 minutes and fixed the burst pipe immediately. Truly life-savers!"
-        </p>
-
-        <div class="flex items-center gap-4 pt-6 border-t border-gray-50 dark:border-gray-700">
-            <img src="https://ui-avatars.com/api/?name=Sarah+Jenkins&background=7C3AED&color=fff" class="w-14 h-14 rounded-full object-cover border-2 border-primaryPurple/20" alt="Customer">
-            <div>
-                <h4 class="font-bold text-gray-900 dark:text-white">Sarah Jenkins</h4>
-                <span class="text-xs font-bold text-green-500 uppercase tracking-tighter flex items-center gap-1">
-                    <i class="fas fa-check-circle"></i> Verified Homeowner
-                </span>
+            <!-- Testimonial 2 (Repeated with updated icon colors) -->
+            <div class="group bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 relative flex flex-col">
+                <div class="absolute -top-5 -right-2 w-14 h-14 bg-primaryPurple rounded-2xl flex items-center justify-center shadow-xl transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 ring-4 ring-white dark:ring-gray-800 z-10">
+                    <i class="fas fa-quote-right text-2xl text-black dark:text-purple-100 drop-shadow-sm"></i>
+                </div>
+                <div class="flex gap-1 text-yellow-400 mb-6">
+                    <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8 italic flex-grow">
+                    "I loved the live tracking feature. Knowing exactly when Mike would arrive meant I didn't have to miss any work meetings. Great tech!"
+                </p>
+                <div class="flex items-center gap-4 pt-6 border-t border-gray-100 dark:border-gray-700">
+                    <img src="https://ui-avatars.com/api/?name=Mark+Thompson&background=7C3AED&color=fff" class="w-14 h-14 rounded-full object-cover border-2 border-primaryPurple/20" alt="Mark Thompson">
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white">Mark Thompson</h4>
+                        <span class="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-tighter flex items-center gap-1">
+                            <i class="fas fa-check-circle"></i> Business Owner
+                        </span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Testimonial 2 -->
-    <div class="group bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 relative flex flex-col">
-        <div class="absolute -top-4 -right-4 w-12 h-12 bg-primaryPurple text-white rounded-2xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform">
-            <i class="fas fa-quote-right text-xl"></i>
-        </div>
-
-        <div class="flex gap-1 text-yellow-400 mb-6">
-            <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
-        </div>
-
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8 italic flex-grow">
-            "I loved the live tracking feature. Knowing exactly when Mike would arrive meant I didn't have to miss any work meetings. Great tech!"
-        </p>
-
-        <div class="flex items-center gap-4 pt-6 border-t border-gray-50 dark:border-gray-700">
-            <img src="https://ui-avatars.com/api/?name=Mark+Thompson&background=7C3AED&color=fff" class="w-14 h-14 rounded-full object-cover border-2 border-primaryPurple/20" alt="Customer">
-            <div>
-                <h4 class="font-bold text-gray-900 dark:text-white">Mark Thompson</h4>
-                <span class="text-xs font-bold text-green-500 uppercase tracking-tighter flex items-center gap-1">
-                    <i class="fas fa-check-circle"></i> Business Owner
-                </span>
+            <!-- Testimonial 3 (Repeated with updated icon colors) -->
+            <div class="group bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 relative flex flex-col">
+                <div class="absolute -top-5 -right-2 w-14 h-14 bg-primaryPurple rounded-2xl flex items-center justify-center shadow-xl transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 ring-4 ring-white dark:ring-gray-800 z-10">
+                    <i class="fas fa-quote-right text-2xl text-black dark:text-purple-100 drop-shadow-sm"></i>
+                </div>
+                <div class="flex gap-1 text-yellow-400 mb-6">
+                    <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8 italic flex-grow">
+                    "Transparent pricing at its best. They gave me a quote via the website and stuck to it perfectly. No hidden fees at all."
+                </p>
+                <div class="flex items-center gap-4 pt-6 border-t border-gray-100 dark:border-gray-700">
+                    <img src="https://ui-avatars.com/api/?name=Emma+Wilson&background=7C3AED&color=fff" class="w-14 h-14 rounded-full object-cover border-2 border-primaryPurple/20" alt="Emma Wilson">
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white">Emma Wilson</h4>
+                        <span class="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-tighter flex items-center gap-1">
+                            <i class="fas fa-check-circle"></i> Property Manager
+                        </span>
+                    </div>
+                </div>
             </div>
+
         </div>
-    </div>
-
-    <!-- Testimonial 3 -->
-    <div class="group bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 relative flex flex-col">
-        <div class="absolute -top-4 -right-4 w-12 h-12 bg-primaryPurple text-white rounded-2xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform">
-            <i class="fas fa-quote-right text-xl"></i>
-        </div>
-
-        <div class="flex gap-1 text-yellow-400 mb-6">
-            <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
-        </div>
-
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8 italic flex-grow">
-            "Transparent pricing at its best. They gave me a quote via the website and stuck to it perfectly. No hidden fees at all."
-        </p>
-
-        <div class="flex items-center gap-4 pt-6 border-t border-gray-50 dark:border-gray-700">
-            <img src="https://ui-avatars.com/api/?name=Emma+Wilson&background=7C3AED&color=fff" class="w-14 h-14 rounded-full object-cover border-2 border-primaryPurple/20" alt="Customer">
-            <div>
-                <h4 class="font-bold text-gray-900 dark:text-white">Emma Wilson</h4>
-                <span class="text-xs font-bold text-green-500 uppercase tracking-tighter flex items-center gap-1">
-                    <i class="fas fa-check-circle"></i> Property Manager
-                </span>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-       
     </div>
 </section>
 <section class="py-20 bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300">
