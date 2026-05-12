@@ -30,7 +30,7 @@
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
 
-   <nav class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md">
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <a href="index.html">
@@ -73,27 +73,33 @@
 });
 </script>
 
-                <div class="hidden lg:flex items-center space-x-4">
-                   <div class="flex items-center gap-3">
-    <!-- Theme Toggle Button -->
-    <button onclick="toggleTheme()" 
-            class="h-10 w-10 flex items-center justify-center rounded-lg border border-primaryPurple text-primaryPurple hover:bg-primaryPurple hover:text-white dark:hover:bg-softPurple dark:border-softPurple transition-all">
-        <i id="theme-icon" class="fas fa-moon"></i>
-    </button>
-
-    <!-- Direction Toggle Button -->
-    <button onclick="toggleDirection()" 
-            class="h-10 w-10 flex items-center justify-center text-xs font-bold border border-primaryPurple text-primaryPurple rounded-lg hover:bg-primaryPurple hover:text-white transition-all uppercase">
-        <span id="dir-text">LTR</span>
-    </button>
-</div>
-                    <div class="hidden lg:flex items-center space-x-4">
+               <!-- Unified Container for all Header Actions -->
+<div class="hidden lg:flex items-center gap-6">
     
-    <a href="login.html" class="px-6 py-2 border-2 border-primary text-primary dark:text-purple-400 font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300">
+    <!-- Settings Group (Theme & Direction) -->
+    <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button onclick="toggleTheme()" 
+                class="h-10 w-10 flex items-center justify-center rounded-lg border border-primaryPurple text-primaryPurple hover:bg-primary Purple hover:text-white dark:hover:bg-softPurple dark:border-softPurple transition-all">
+            <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+
+        <!-- Direction Toggle Button -->
+        <button onclick="toggleDirection()" 
+                class="h-10 w-10 flex items-center justify-center text-xs font-bold border border-primaryPurple text-primaryPurple rounded-lg hover:bg-primary Purple hover:text-white transition-all uppercase">
+            <span id="dir-text">LTR</span>
+        </button>
+    </div>
+
+    <!-- Auth Group (Login & My Account) -->
+    <div class="flex items-center gap-4">
+        <!-- Login Button -->
+         <a href="login.html" class="px-6 py-2 border-2 border-primary text-primary dark:text-purple-400 font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300">
         Login
     </a>
 
-    <div class="relative group">
+        <!-- My Account Dropdown -->
+        <div class="relative group">
         <button class="bg-primary text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-purple-700 transition shadow-lg shadow-purple-200 dark:shadow-none">
             <i class="fas fa-user-circle text-lg"></i>
             <span>My Account</span>
@@ -111,9 +117,8 @@
             
         </div>
     </div>
-
+    </div>
 </div>
-                </div>
 
                 <div class="lg:hidden flex items-center gap-4">
                     <button onclick="toggleTheme()" class="p-2"><i id="theme-icon-mob" class="fas fa-moon"></i></button>
